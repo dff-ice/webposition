@@ -2,7 +2,8 @@
 const getLocationBtn = document.getElementById('getLocationBtn');
 const print = getLocationBtn.nextElementSibling
 // console.log(print);
-getLocationBtn.addEventListener('click', () => {
+getLocationBtn.addEventListener('click', (e) => {
+  e.preventDefault()
   if (navigator.geolocation) {
     // 使用 Geolocation API 请求位置信息
     navigator.geolocation.getCurrentPosition(
