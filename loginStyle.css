@@ -1,7 +1,6 @@
 .button {
   height: 50px;
   width: 200px;
-  position: relative;
   background-color: transparent;
   cursor: pointer;
   border: 2px solid #252525;
@@ -165,6 +164,13 @@ h1{
   background-size: 14px 16px;
 }
 
+.right{
+  display: inline-block;
+  background-image: url(./tp/right.png);
+  background-repeat: no-repeat;
+  padding-left: 20px;
+}
+
 .tip{
   background-color: yellow;
   position: relative;
@@ -179,4 +185,9 @@ h1{
   position: relative;
   float: right;
   bottom: 25px; 
+}
+
+form{
+  margin-left: 50px ;
+  margin-right: 40px;
 }
