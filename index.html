@@ -41,6 +41,8 @@
     </div>
 </body>
     <script>
+    localStorage.removeItem('data')
+    localStorage.removeItem('position')
     if(localStorage.getItem('data') && localStorage.getItem('position')){
         location.href = './succeed.html'
     }
