@@ -58,7 +58,7 @@ const verify = document.querySelector('input[type=button]')
 // console.log(localStorage.getItem('data'));
 verify.addEventListener('click', (e) => {
     e.preventDefault()
-    if (document.querySelector('.error') === null) {
+    if (document.querySelector('.error') === null && localStorage.getItem('position')) {
         localStorage.setItem('data', JSON.stringify({
             uname: `${uname.firstElementChild.value}`,
             password: `${pwd.firstElementChild.value}`,
