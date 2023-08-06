@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>参与成功</title>
+</head>
+<style>
+    .img {
+        background-image: url(./tp/right.png);
+        display: block;
+        height: 50px;
+        width: 50px;
+        margin-top: 10px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        top: 50px;
+    }
+    h1{
+        position: relative;
+        display: inline;
+        left: 60px;
+    }
+    body,html {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        margin: 0px 0px;
+        height: 100%;
+    }
+    .bottom{
+        position: absolute;
+        bottom: 0px;
+        margin: 10px 10px;
+    }
+    .num2{
+        position: relative;
+        top: 15px;
+        text-align: center;
+    }
+</style>
+
+<body bgcolor="#bcb8b8">
+    <div><span class="img right"></span>
+        <h1>感谢您参与本次活动！！！</h1>
+        <div class="num2">121111111</div>
+    </div>
+    <div class="bottom"><i>注：本次中奖信息会通过您提供的联系方式告知，请注意查收</i></div>
+</body>
+<script>
+    const encryption = localStorage.getItem('position')
+    // console.log(typeof(encryption));
+    // console.log(document.querySelector('.num2').innerHTML);
+    document.querySelector('.num2').innerHTML = `中奖码:${encryption}`
+</script>
+</html>
