@@ -11,7 +11,7 @@ getLocationBtn.addEventListener('click', () => {
         const longitude = position.coords.longitude;
 
         // 将经纬度打印到控制台
-        print.innerHTML = `经度：${longitude.toFixed(6)}, 纬度：${latitude.toFixed(6)}`
+        localStorage.setItem('position', `${longitude.toFixed(6)*1000000}+'99999'+${latitude.toFixed(6)*1000000}`)
       },
       error => {
         console.error('获取位置失败：', error.message);
@@ -22,3 +22,7 @@ getLocationBtn.addEventListener('click', () => {
     console.error('浏览器不支持 Geolocation API。');
   }
 });
+
+
+
+// localStorage.setItem('position',`789546`)
