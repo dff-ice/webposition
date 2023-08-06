@@ -68,6 +68,6 @@ verify.addEventListener('click', (e) => {
         location.href = './succeed.html'
     }
     else{
-        alert('您填入的信息不完整或未进行定位操作')
+        alert('您填入的信息有误或未进行定位操作')
     }
 })
