@@ -82,7 +82,7 @@ h1{
   font: 12px/150% Arial,Verdana,"\5b8b\4f53";
   color: #666;
   position: fixed;
-  bottom: 38px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
 }
@@ -163,15 +163,6 @@ h1{
   margin-top: 10px;
   background: url(./tp/error1.png) no-repeat;
   background-size: 14px 16px;
-}
-
-.right {
-  color: green;
-  display: block;
-  height: 15px;
-  width: 15px;
-  margin-top: 10px;
-  background: url(./tp/right.png) no-repeat left center;
 }
 
 .tip{
