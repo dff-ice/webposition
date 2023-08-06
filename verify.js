@@ -6,7 +6,7 @@ const phone = document.querySelector('.input-wrapper:nth-child(7)')
 uname.firstElementChild.addEventListener('blur', () => {
     console.log(/^[a-zA-Z0-9,.!?'"()\- ]*$/.test(uname.firstElementChild.value));
     if (!/^[a-zA-Z0-9,.!?'"()\- ]*$/.test(uname.firstElementChild.value)) {
-        uname.nextElementSibling.innerHTML = '含有非法字符'
+        uname.nextElementSibling.innerHTML = '含有非法字符或中文字符'
         uname.nextElementSibling.className = 'error'
         return
     }
