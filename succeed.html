@@ -40,6 +40,10 @@
         top: 15px;
         text-align: center;
     }
+    a{
+        text-decoration: none;
+        height: 30px;
+    }
 </style>
 
 <body bgcolor="#bcb8b8">
@@ -47,12 +51,13 @@
         <h1>感谢您参与本次活动！！！</h1>
         <div class="num2">121111111</div>
     </div>
+    <a href="./rule.html">抽奖规则</a>
     <div class="bottom"><i>注：本次中奖信息会通过您提供的联系方式告知，请注意查收</i></div>
 </body>
 <script>
     const encryption = localStorage.getItem('position')
     // console.log(typeof(encryption));
     // console.log(document.querySelector('.num2').innerHTML);
-    document.querySelector('.num2').innerHTML = `中奖码:${encryption}`
+    document.querySelector('.num2').innerHTML = `兑奖码:${encryption}`
 </script>
 </html>
