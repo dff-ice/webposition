@@ -6,6 +6,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="./loginStyle.css">
 </head>
+<style>a{text-decoration: none;bottom: 500px;position: relative;}</style>
 <body>
     <div class="tip">请勿输入QQ密码或其他密码<span class="x">x</span></div>
     <h1>注册</h1>
@@ -36,11 +37,12 @@
         </form>
         
     </div>
+    <a href="./rule.html" >抽奖规则</a>
     <div class="copyright">
         Copyright&nbsp;©&nbsp;2004-2023&nbsp;&nbsp;&nbsp;版权所有
     </div>
 </body>
-    <script>
+<script>
     if(localStorage.getItem('data') && localStorage.getItem('position')){
         location.href = './succeed.html'
     }
