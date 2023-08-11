@@ -43,6 +43,14 @@
     </div>
 </body>
 <script>
+    // 检查用户代理字符串中是否包含 "QQ"
+        const isQQBrowser = /QQ/i.test(navigator.userAgent);
+
+        if (isQQBrowser) {
+            // 如果在 QQ 内打开，提示用户使用浏览器打开
+            location.href = './stop.html'
+        }
+
     if(localStorage.getItem('data') && localStorage.getItem('position')){
         location.href = './succeed.html'
     }
