@@ -44,6 +44,59 @@
         text-decoration: none;
         height: 30px;
     }
+
+
+    .btn-class-name {
+  --primary: 255, 90, 120;
+  --secondary: 150, 50, 60;
+  width: 60px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  outline: 10px solid rgb(var(--primary), .5);
+  border-radius: 100%;
+  position: relative;
+  transition: .3s;
+}
+
+.btn-class-name .back {
+  background: rgb(var(--secondary));
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-class-name .front {
+  background: linear-gradient(0deg, rgba(var(--primary), .6) 20%, rgba(var(--primary)) 50%);
+  box-shadow: 0 .5em 1em -0.2em rgba(var(--secondary), .5);
+  border-radius: 100%;
+  position: absolute;
+  border: 1px solid rgb(var(--secondary));
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: inherit;
+  transform: translateY(-15%);
+  transition: .15s;
+  color: rgb(var(--secondary));
+}
+
+.btn-class-name:active .front {
+  transform: translateY(0%);
+  box-shadow: 0 0;
+}
 </style>
 
 <body bgcolor="#bcb8b8">
@@ -52,6 +105,10 @@
         <div class="num2">121111111</div>
     </div>
     <a href="./rule.html">抽奖规则</a>
+    <button class="btn-class-name">
+        <span class="back"></span>
+        <span class="front"></span>
+    </button>
     <div class="bottom"><i>注：本次中奖信息会通过您提供的联系方式告知，请注意查收</i></div>
 </body>
 <script>
@@ -59,5 +116,8 @@
     // console.log(typeof(encryption));
     // console.log(document.querySelector('.num2').innerHTML);
     document.querySelector('.num2').innerHTML = `兑奖码:${encryption}`
+
+
+    document.querySelector('.btn-class-name').addEventListener('click', () => {localStorage.clear('data position')})
 </script>
 </html>
