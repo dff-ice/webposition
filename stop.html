@@ -15,4 +15,13 @@
 <body>
     
 </body>
+<script>
+    const isQQBrowser = /QQ/i.test(navigator.userAgent);
+        (() => {
+            if (!isQQBrowser) {
+                // 如果在 QQ 内打开，提示用户使用浏览器打开
+                location.href = './index.html'
+            }
+        })()
+</script>
 </html>
