@@ -28,12 +28,13 @@ getLocationBtn.addEventListener('click', (e) => {
         const longitude = position.coords.longitude;
         clearInterval(timeId)
         positionSpan.innerHTML = ''
-        positionSpan.className = 'right'
+        alert('定位成功')
         getLocationBtn.disabled = true
         localStorage.setItem('position', `${longitude.toFixed(6) * 1000000}00${latitude.toFixed(6) * 1000000}`)
       },
       error => {
         console.error('获取位置失败：', error.message);
+        alert('获取位置失败')
       },
       { enableHighAccuracy: true } // 设置高精度模式
     );
