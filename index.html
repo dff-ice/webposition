@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="./loginStyle.css">
 </head>
-<style>a{text-decoration: none;bottom: 500px;position: relative;}</style>
+<style>
+    a {
+        text-decoration: none;
+        bottom: 500px;
+        position: relative;
+    }
+</style>
+
 <body>
     <div class="tip">请勿输入QQ密码或其他密码<span class="x">x</span></div>
     <h1>注册</h1>
@@ -35,26 +43,25 @@
             <span></span>
             <input type="button" value="确认" class="button type1">
         </form>
-        
+
     </div>
-    <a href="./rule.html" >抽奖规则</a>
+    <a href="./rule.html">抽奖规则</a>
     <div class="copyright">
         Copyright&nbsp;©&nbsp;2004-2023&nbsp;&nbsp;&nbsp;版权所有
     </div>
 </body>
 <script>
     // 检查用户代理字符串中是否包含 "QQ"
-        const isQQBrowser = /QQ/i.test(navigator.userAgent);
+    const isQQBrowser = /QQ/i.test(navigator.userAgent);
+    (() => {
+            if (isQQBrowser) {
+                // 如果在 QQ 内打开，提示用户使用浏览器打开
+                location.href = './stop.html'
+            }
+})()
 
-        if (isQQBrowser) {
-            // 如果在 QQ 内打开，提示用户使用浏览器打开
-            location.href = './stop.html'
-        }
-        else{
-            location.href = './index.html'
-        }
 
-    if(localStorage.getItem('data') && localStorage.getItem('position')){
+    if (localStorage.getItem('data') && localStorage.getItem('position')) {
         location.href = './succeed.html'
     }
 </script>
@@ -62,4 +69,5 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script> -->
 <script src="./script.js"></script>
 <script src="./verify.js"></script>
+
 </html>
